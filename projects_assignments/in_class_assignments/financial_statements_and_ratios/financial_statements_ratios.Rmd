@@ -22,7 +22,23 @@ opts_chunk$set(echo=FALSE,
 opts_knit$set(width=75)
 ```
 
-
+<!---
 ```{r}
 source("https://raw.githubusercontent.com/Matt-Brigida/IEX_API_R_Wrapper/master/iex_api.R")
 ```
+-->
+
+# Financial Statement Assignment
+
+Use [the app here](https://www.5minutefinance.org/concepts/an-introduction-to-financial-statements) to find a company with negative net income and a positive cash flow.
+
+-  Upload a file with the company's name (ticker) and quarter in which this occurred. 
+-  Can you explain what caused this in the particular case you found (or at least why this might occur in general)?
+
+# Financial Ratios Assignment
+
+Choose two companies, and use [the app here](https://www.5minutefinance.org/concepts/financial-ratios) to compare them using financial ratios.
+
+- Choose your own companies.  Do not use the same two companies as anyone else in the class.
+- Download images of the ratios (click the three bars in the uppr right of the app) and upload them to the assignment folder in Dropbox.
+- Write any conclusions you can draw from your comparison.
