@@ -1,6 +1,6 @@
 ---
-title: "Financial Statements and Ratios Assignment"
-date: "January 30, 2019"
+title: "Financial Statements and Ratios Assignments"
+date: 
 output:
   rmdformats::html_clean:
     highlight: kate
