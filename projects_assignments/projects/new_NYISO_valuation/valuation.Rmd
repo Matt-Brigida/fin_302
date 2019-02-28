@@ -1,0 +1,9 @@
+---
+title: "FIN 302 Project:  Tolling Agreement Valuation"
+author:  "Matt Brigida, Ph.D."
+---
+
+Power Plant Name:  CALPINE_BP_GT1  (meaning Calpine Corporation's, Beth Page Location, Gas Turbine Number 1)
+Power Plant PTID:  23823
+
+Link to data for 2/27/2019: [http://mis.nyiso.com/public/csv/realtime/20190227realtime_gen.csv](http://mis.nyiso.com/public/csv/realtime/20190227realtime_gen.csv)
