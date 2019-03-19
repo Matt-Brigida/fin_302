@@ -8,7 +8,7 @@ author:  "Matt Brigida, Ph.D."
 Power Plant Name:  CALPINE_BP_GT1  (meaning Calpine Corporation's, Beth Page Location, Gas Turbine Number 1)
 Power Plant PTID:  23823
 
-Link to data for 2/27/2019: [http://mis.nyiso.com/public/csv/realtime/20190227realtime_gen.csv](http://mis.nyiso.com/public/csv/realtime/20190227realtime_gen.csv)
+Link to data for all days in February 2019: [http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip](http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip)
 
 
 ## Overview 
@@ -17,7 +17,7 @@ Value the following tolling contract on a natural gas fired power plant via disc
 
 ### Contract Details:
 
-#.  Your contract is for 250 MW per hour, for every on-peak hour from 6/1/2016 to 11/30/2016 (inclusive of start and end dates).
+#.  Your contract is for 250 MW per hour, for every on-peak hour from 6/1/2019 to 11/30/2019 (inclusive of start and end dates).
 #.  Note on-peak means 5x16, or Monday through Friday from the hour ending 0800 to the hour ending 2300.  
 #.  The plant's heat rate (HR) is: 7.1.  
 #.  The contract states, for each day you choose to produce electricity, you'll pay the day's Henry Hub spot natural gas price plus \$0.17.
@@ -25,7 +25,7 @@ Value the following tolling contract on a natural gas fired power plant via disc
 #.  For each MWh you choose to produce, you'll pay a operating fee of \$0.45.  You won't have to pay any other costs such as those for starting up the plant (if necessary).
 #.  For each day you can either produce 250 MW per hour or nothing.  Therefore for each day you will produce 16*250 = 4000 MWh or 0 MWh. 
 #.  You must notify the plant by 6pm if you plan to run the plant the following day. 
-#. For one day only in the interval 6/1/2016 to 11/30/2016, you have the right to produce an extra 350MW per hour during the on-peak hours. Once you exercise this right on a particular day, the right ceases to exist.
+#. For one day only in the interval 6/1/2019 to 11/30/2019, you have the right to produce an extra 350MW per hour during the on-peak hours. Once you exercise this right on a particular day, the right ceases to exist.
 
 To get you started, the plant's HR (a measure of efficiency) is defined as the number of British thermal units (Btu) of input fuel required to generate 1 megawatt hour (MWh) of electricity.  Thus, for a particular plant, the heat rate can be written as $HR=\frac{S_E}{S_G}MMBtu/MWh$ where $S_E$ and $S_G$ denote the spot price of electricity and natural gas respectively. 
 
