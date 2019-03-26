@@ -386,17 +386,15 @@ $(document).ready(function () {
 <div id="contract-details" class="section level3">
 <h3>Contract Details:</h3>
 <ol>
-<li>Your contract is for 250 MW per hour, for every on-peak hour from 6/1/2019 to 11/30/2019 (inclusive of start and end dates).</li>
-<li>Note on-peak means 5x16, or Monday through Friday from the hour ending 0800 to the hour ending 2300.<br />
-</li>
-<li>The plant’s heat rate (HR) is: 7.1.<br />
-</li>
+<li>Your contract is for 250 MW per hour, for every on-peak hour from 6/10/2019 to 6/14/2019 (inclusive of start and end dates).</li>
+<li>Note on-peak means 5x16, or Monday through Friday from the hour ending 0800 to the hour ending 2300.</li>
+<li>The plant’s heat rate (HR) is: 7.1.</li>
 <li>The contract states, for each day you choose to produce electricity, you’ll pay the day’s Henry Hub spot natural gas price plus $0.17.</li>
 <li>You will receive the real-time wholesale electricity price at the plant’s PnodeID.</li>
 <li>For each MWh you choose to produce, you’ll pay a operating fee of $0.45. You won’t have to pay any other costs such as those for starting up the plant (if necessary).</li>
 <li>For each day you can either produce 250 MW per hour or nothing. Therefore for each day you will produce 16*250 = 4000 MWh or 0 MWh.</li>
 <li>You must notify the plant by 6pm if you plan to run the plant the following day.</li>
-<li>For one day only in the interval 6/1/2019 to 11/30/2019, you have the right to produce an extra 350MW per hour during the on-peak hours. Once you exercise this right on a particular day, the right ceases to exist.</li>
+<li>For one day only in the interval 6/10/2019 to 6/14/2019, you have the right to produce an extra 350MW per hour during the on-peak hours. Once you exercise this right on a particular day, the right ceases to exist.</li>
 </ol>
 <p>To get you started, the plant’s HR (a measure of efficiency) is defined as the number of British thermal units (Btu) of input fuel required to generate 1 megawatt hour (MWh) of electricity. Thus, for a particular plant, the heat rate can be written as <span class="math inline">\(HR=\frac{S_E}{S_G}MMBtu/MWh\)</span> where <span class="math inline">\(S_E\)</span> and <span class="math inline">\(S_G\)</span> denote the spot price of electricity and natural gas respectively.</p>
 <p>Given the HR, the cash flow from the opportunity to generate 1 MWh of electricity at some point in the future (denoted by <span class="math inline">\(T\)</span>) may be written as <span class="math inline">\(CF=max(S^T_E-(HR)S^T_G, \;0)\)</span> where <span class="math inline">\(CF\)</span> denotes cash flow. Remember, you are producing 250 MW per hour and not 1. Also note, I have not taken into account other factors such as your operating fee, and your basis from Henry Hub.</p>
