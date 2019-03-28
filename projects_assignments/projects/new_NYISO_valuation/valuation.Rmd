@@ -8,7 +8,7 @@ author:  "Matt Brigida, Ph.D."
 Power Plant Name:  CALPINE_BP_GT1  (meaning Calpine Corporation's, Beth Page Location, Gas Turbine Number 1)
 Power Plant PTID:  23823
 
-Link to data for all days in February 2019: [http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip](http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip)
+Link to data for all days in June 2018: [http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip](http://mis.nyiso.com/public/csv/realtime/20180601realtime_gen_csv.zip)
 
 
 ## Overview 
