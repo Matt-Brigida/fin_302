@@ -1,0 +1,72 @@
+---
+title: "A Look at Risk and Return"
+date: "April 16, 2019"
+output:
+  rmdformats::html_clean:
+    highlight: kate
+---
+
+# Function to pull data from the IEX
+
+```{r warning=FALSE, message=FALSE}
+
+## use httr
+library(httr)
+library(quantmod)
+
+base_url <- "https://api.iextrading.com/"
+version <- "1.0/"
+
+.datahandler <- function(tmpdata, ticker = ""){
+    tmpdata <- content(tmpdata, "parsed")
+    tmpdata <- do.call(rbind, tmpdata)
+    tmpdata <- data.frame(tmpdata)
+    if(ticker != ""){
+    tmpdata$Ticker <- toupper(ticker)
+    }
+    ## adding the next line will cause dates to be converted to numeric (they were being brought in as factor)
+    ## what is this next line trying to do???? It removes all the data at this point
+    ## tmpdata <- tmpdata[-(rownames(tmpdata) == "symbol"),]
+    return(tmpdata)
+}
+
+## one minute prices over day for given ticker
+one_day <- function(ticker){
+    tmpdata <- GET(paste0(base_url, version, "stock/", ticker,"/chart/1d"))
+    .datahandler(tmpdata, ticker)
+}
+
+
+one_month <- function(ticker){
+    tmpdata <- GET(paste0(base_url, version, "stock/", ticker,"/chart"))
+    .datahandler(tmpdata, ticker)
+}
+
+one_year <- function(ticker){
+    tmpdata <- GET(paste0(base_url, version, "stock/", ticker,"/chart/1y"))
+    .datahandler(tmpdata, ticker)
+    }
+
+## returned data are formatted poorly at this point so create helper function to calculate returns
+
+get_returns <- function(x){
+    return(Delt(as.numeric(as.character(x))))
+}
+
+```
+
+
+# Take a look at the average returns and standard deviations for asset classes
+
+```{r}
+
+stock_ticker <- "SHY"  ## 1 to 3 year US Treasury Bonds
+
+stock_1day <- one_day(stock_ticker)
+
+stock_1day_returns <- get_returns(stock_1day$marketAverage)
+
+mean(stock_1day_returns, na.rm=TRUE)
+sd(stock_1day_returns, na.rm=TRUE)
+
+```
