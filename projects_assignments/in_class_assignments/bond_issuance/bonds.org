@@ -1,0 +1,9 @@
+#+title: Bond/Stock Issuance Assignment
+#+author: Matt Brigida, Ph.D.
+
+
+Use the [[https://www.sec.gov/edgar/searchedgar/companysearch.html][SEC's EDGAR database]] to find a bond or stock issuance, and upload the details of the issuance to the Blackboard dropbox.  
+
++ The details of a bond issuance would be the par amount sold, the currency, the coupon, and maturity.  You also can include the trustee.
++ The details of a stock issuance would be the number of shares sold, par value, and total dollar value, etc.
+
