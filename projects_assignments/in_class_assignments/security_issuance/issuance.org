@@ -1,5 +1,6 @@
 #+title: Bond/Stock Issuance Assignment
 #+author: Matt Brigida, Ph.D.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 
 Use the [[https://www.sec.gov/edgar/searchedgar/companysearch.html][SEC's EDGAR database]] to find a bond or stock issuance, and upload the details of the issuance to the Blackboard dropbox.  
