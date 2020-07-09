@@ -1,0 +1,7 @@
+#+title: CAPM Assignment
+#+author: Matt Brigida, Ph.D.
+#+STARTUP: hideblocks
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+
+Choose a stock with a ticker that start with the same letter as your last name.  Calculate the beta coefficient for that stock.  See the March 24 class video for instructions.
