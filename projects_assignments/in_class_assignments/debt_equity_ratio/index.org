@@ -1,0 +1,9 @@
+#+title: Debt-to-Equity (D/E) Ratio Assignment
+#+author: Matt Brigida, Ph.D.
+#+STARTUP: hideblocks
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+
+1. Choose a stock with a ticker that start with the same letter as your last name.  
+2. Calculate the *book* debt to equity value for your stock.  You can use the financial statements available for each stock from the IEX ([[https://iextrading.com/apps/stocks/XOM][see here for XOM]]).  You can also probably get the ratio directly from Yahoo Finance.
+3.  Compare the company's book D/E ratio to the[[https://matt-brigida.github.io/5mf-capital-structure/][ industry average *market value* D/E ratio (slide 8).]]
