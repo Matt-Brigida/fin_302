@@ -1,0 +1,9 @@
+#+title: Institutional Ownership and ROA
+#+author: Matt Brigida, Ph.D.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+We learned that the agency problem is generally increasing in the proportion of a firm which is owned by small shareholders.  Use the following data to test whether industries that have larger amounts of institutional ownership also have higher returns on equity or invested capital.
+
+-  [[http://www.stern.nyu.edu/~adamodar/pc/datasets/inshold.xls][Here is data on institutional ownership by industry.]]
+-  [[http://www.stern.nyu.edu/~adamodar/pc/datasets/pbvdata.xls][Here is data on ROE and ROIC.]]
+
