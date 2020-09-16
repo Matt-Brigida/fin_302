@@ -1,0 +1,57 @@
+#+title: Solution: Institutional Ownership and ROA
+#+author: Matt Brigida, Ph.D.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+
+* Get the Data and Merge
+
+#+BEGIN_SRC R :exports code :results export :session sess
+library(tidyverse)
+library(httr)
+library(readxl)
+
+inst_own_url <- "http://www.stern.nyu.edu/~adamodar/pc/datasets/inshold.xls"
+
+GET(inst_own_url, write_disk(tf_inst <- tempfile(fileext = ".xls")))
+inst_own <- read_excel(tf_inst, 1L, skip = 7)
+
+roe_url <- "http://www.stern.nyu.edu/~adamodar/pc/datasets/pbvdata.xls"
+
+GET(roe_url, write_disk(tf_roe <- tempfile(fileext = ".xls")))
+roe <- read_excel(tf_roe, 1L, skip = 7)
+names(roe)[1] <- "Industry Name"
+
+all_data <- merge(roe, inst_own, by = "Industry Name")
+all_data$ROE <- as.numeric(all_data$ROE)
+all_data <- all_data[complete.cases(all_data), ]
+
+head(all_data)
+#+END_SRC
+
+#+RESULTS:
+| Advertising       | 47 |  5.982433780654601 | 0.260839487750977 | 4.36404014797428 |  0.635138351051042 | 47 | 0.05040944444 | 0.3754508696 |  0.1610234615 |
+| Aerospace/Defense | 77 |  6.090570809542459 | 0.314203122074865 | 5.81197889316677 |  0.339329733168505 | 77 | 0.03048134615 | 0.5710014545 |  0.0994287037 |
+| Air Transport     | 18 | 2.3429187022059925 | 0.282028381989073 | 1.62624155566544 |  0.136920267260192 | 18 | 0.01771333333 | 0.7301714286 | 0.04261307692 |
+| Apparel           | 51 |  3.725980658527597 | 0.167232762720083 | 2.55158176039174 |  0.163390661472867 | 51 | 0.09134235294 | 0.5055834286 |  0.1804265789 |
+| Auto & Truck      | 13 |  1.818661185303154 | 0.124286554488187 | 1.06959612073352 | 0.0289102534395996 | 13 | 0.06959857143 |     0.606275 |       0.09571 |
+| Auto Parts        | 46 | 1.9477213256191348 | 0.125642115946838 | 1.52254491096242 |  0.170001600111432 | 46 |  0.0290562069 | 0.5991070968 |  0.1131790625 |
+
+
+
+* Calculating Correlation Coefficients
+
+- Correlation between Institutional Ownership and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`Institutional Holdings`)}
+- Correlation between CEO Holding and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`CEO Holding`)}
+- Correlation between Insider Holdings and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`Insider Holdings`)}
+
+  
+* Scatterplot with Regression Line
+
+#+BEGIN_SRC R :results output graphics :exports both :file a.png :session sess
+library(ggplot2)
+ggplot(all_data, aes(x=`Institutional Holdings`, y=ROE)) +
+    geom_point() + 
+    geom_smooth(method="lm")
+#+END_SRC
+
+#+RESULTS:
+[[file:a.png]]
