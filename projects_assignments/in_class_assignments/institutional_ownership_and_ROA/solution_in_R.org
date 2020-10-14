@@ -39,7 +39,7 @@ head(all_data)
 
 * Calculating Correlation Coefficients
 
-- Correlation between Institutional Ownership and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`Institutional Holdings`)}
+- Correlation between Institutional Ownership and ROE:  src_R[:exports results :session sess]{round(cor(all_data$ROE, all_data$`Institutional Holdings`), 2)} {{{results(=0.21=)}}}
 - Correlation between CEO Holding and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`CEO Holding`)}
 - Correlation between Insider Holdings and ROE:  src_R[:exports results :session sess]{cor(all_data$ROE, all_data$`Insider Holdings`)}
 
@@ -55,3 +55,41 @@ ggplot(all_data, aes(x=`Institutional Holdings`, y=ROE)) +
 
 #+RESULTS:
 [[file:a.png]]
+
+* Regression Results
+
+The results are consistent with higher institutional and insider holdings decreasing the agency problem and increasing ROE.
+
+#+BEGIN_SRC R :exports both :results output :session sess
+summary(lm(ROE ~ `Institutional Holdings` + `CEO Holding` + `Insider Holdings`, data = all_data))
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+Call:
+lm(formula = ROE ~ `Institutional Holdings`
+`CEO Holding`
+
+    `Insider Holdings`, data = all_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.53854 -0.07643 -0.01240  0.04336  0.70750 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)   
+(Intercept)               -0.1529     0.1134  -1.349   0.1808   
+`Institutional Holdings`   0.3854     0.1446   2.665   0.0091 **
+`CEO Holding`             -0.8960     0.8165  -1.097   0.2754   
+`Insider Holdings`         1.1039     0.5185   2.129   0.0360 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1619 on 91 degrees of freedom
+Multiple R-squared:  0.09081,	Adjusted R-squared:  0.06083 
+F-statistic:  3.03 on 3 and 91 DF,  p-value: 0.03341
+#+end_example
+
+
+

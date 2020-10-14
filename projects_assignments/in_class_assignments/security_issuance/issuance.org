@@ -1,9 +1,9 @@
-#+title: Bond/Stock Issuance Assignment
+#+title: Bond/Stock Registration Assignment
 #+author: Matt Brigida, Ph.D.
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 
-Use the [[https://www.sec.gov/edgar/searchedgar/companysearch.html][SEC's EDGAR database]] to find a bond or stock issuance, and upload the details of the issuance to the Blackboard dropbox.  
+Choose a company whose name starts with the same letter as your last name.  For example, I may choose Boeing.  Use the [[https://www.sec.gov/edgar/searchedgar/companysearch.html][SEC's EDGAR database]] to find a registration form (form S-3) for a bond or stock issuance, and upload the details of the issuance, with a link to the form, to the Blackboard dropbox.  [[https://www.sec.gov/Archives/edgar/data/12927/000119312520208107/d164418ds3asr.htm][For example here is a link to a securities registration by Boeing.]]
 
 + The details of a bond issuance would be the par amount sold, the currency, the coupon, and maturity.  You also can include the trustee.
 + The details of a stock issuance would be the number of shares sold, par value, and total dollar value, etc.
