@@ -4,4 +4,15 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 
-Choose a stock with a ticker that start with the same letter as your last name.  Calculate the beta coefficient for that stock.  See the March 24 class video for instructions.
+Choose a stock with a ticker that start with the same letter as your last name.  Calculate and report the beta coefficient for that stock.  
+
+-  You can download [[https://iextrading.com/apps/stocks/][stock price data from the IEX.]]
+-  You can use the regression feature in Excel or simply use the ==slope()= function.
+-  Tell me what the beta coefficient is.  If you simply run a regression and provide the results **you will get no credit because it is not clear you know what the beta coefficient is**.  At the top of whatever you submit it should say:
+#+BEGIN_QUOTE
+Stock X's beta coefficient is Y.
+#+END_QUOTE
+
+
+
+You can also see the class video for instructions.
